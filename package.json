@@ -3,12 +3,22 @@
   "version": "1.0.0",
   "description": "MERN shopping cart",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node backend/server"
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
   },
   "author": "Ajmal Bin Abdul Aziz",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "and": "0.0.3",
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.5"
   }
 }
