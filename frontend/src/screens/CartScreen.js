@@ -24,7 +24,7 @@ const CartScreen = ({ match, location, history }) => {        //history - used t
     },[dispatch, productId, qty])
 
     const cartItemRemoveHandler = (id) => {
-        dispatch(removeFromCart(id))
+        dispatch(removeFromCart(id)) 
     }
 
     const checkoutHandler = () => {
